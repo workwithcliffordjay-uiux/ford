@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.container {
+  @apply mx-auto w-full max-w-6xl my-4 px-6 lg:px-0;
+}
+
+.btn {
+  @apply inline-flex items-center gap-3 rounded-full px-7 py-3.5 text-sm font-medium transition;
+}
+
+.btn-primary {
+  @apply bg-black text-white hover:bg-gray-800;
+}
+
+.btn-outline {
+  @apply border border-gray-300 text-black hover:border-black;
+}
+
+.btn-lg {
+  @apply gap-4 py-4;
+}
+
+.eyebrow {
+  @apply text-sm font-medium uppercase tracking-[0.2em] text-gray-500;
+}
+
+.eyebrow-sm {
+  @apply text-xs font-medium uppercase tracking-[0.15em] text-gray-500;
+}
+
+.tag {
+  @apply rounded-full border border-gray-200 px-3 py-1.5 text-xs text-gray-600;
+}
+
+/* Pans a tall screenshot from its top to its bottom while the card is hovered,
+   the way a long page looks when you scroll it. Pairs with `group` on the card. */
+.preview-scroll {
+  @apply object-cover object-top transition-[object-position] duration-[10000ms] ease-linear;
+}
+
+.group:hover .preview-scroll,
+.group:focus-within .preview-scroll {
+  @apply object-bottom;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preview-scroll {
+    @apply transition-none;
+  }
 }

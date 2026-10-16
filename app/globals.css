@@ -46,10 +46,8 @@ html {
   @apply rounded-full border border-gray-200 px-3 py-1.5 text-xs text-gray-600;
 }
 
-/* Pans a tall screenshot from its top to its bottom while the card is hovered,
-   the way a long page looks when you scroll it. Pairs with `group` on the card. */
 .preview-scroll {
-  @apply object-cover object-top transition-[object-position] duration-[10000ms] ease-linear;
+  @apply object-cover object-top transition-[object-position] duration-5000 ease-linear;
 }
 
 .group:hover .preview-scroll,

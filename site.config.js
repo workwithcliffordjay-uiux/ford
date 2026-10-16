@@ -8,8 +8,7 @@ export const siteConfig = {
   description:
     "Portfolio of Clifford Jay Iyac, a full-stack developer building scalable web systems with Next.js, React, and Node.js.",
   locale: "en_US",
-  // TODO: replace with the real address — it is published in the JSON-LD.
-  email: "your.email@example.com",
+  email: "workwithcliffordjay@gmail.com",
   // TODO: replace with the real X/Twitter handle, or remove to drop twitter:site.
   twitterHandle: "@yourhandle",
   // Rendered in the Contact block and as `sameAs` in the Person schema.
